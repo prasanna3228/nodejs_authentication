@@ -1,0 +1,64 @@
+###
+GET http://localhost:3000/books/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXNhbm5hMzIyIiwiaWF0IjoxNjk1NzI1NTE2fQ.z5qg0IVzZ-ViWYzY_5QPFsSNLMyBvFnS4gNC_y96Nbo
+
+###
+GET  http://localhost:3000/books/3/
+
+###
+POST  http://localhost:3000/book/
+Content-Type: application/json
+
+{
+    "id":4,
+    "name":"telugu",        
+    "author":"ss"
+}
+###
+PUT  http://localhost:3000/books/4/
+Content-Type:  application/json
+
+{
+    "name":"english","author":"prasanna"
+}
+
+###
+DELETE http://localhost:3000/books/4/
+
+
+###
+
+GET  http://localhost:3000/books_authors/
+
+//// authentication............
+
+###
+
+POST http://localhost:3000/users/
+Content-Type:  application/json
+
+{
+    "name":"prasanna",
+    "username":"prasanna322",
+    "password":"1231231231",
+    "gender":"Male",
+    "location":"hyderabad"
+}
+
+###
+POST  http://localhost:3000/login/
+Content-Type:  application/json
+
+{
+    "username":"prasanna322",
+    "password":"1231231231"
+}
+
+###
+POST  http://localhost:3000/loginjwt/
+Content-Type:  application/json
+
+{
+    "username":"prasanna322",
+    "password":"1231231231"
+}
